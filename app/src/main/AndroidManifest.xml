@@ -17,6 +17,11 @@
         </activity>
         <service android:name=".JobSchedulerService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <receiver android:name=".AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
 
     </application>
 
